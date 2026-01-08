@@ -337,6 +337,67 @@
             font-weight: 600;
         }
 
+        /* About Us Section */
+        .about-us {
+            background: var(--dark-navy);
+            padding: 10rem 2rem;
+            border-top: 3px solid var(--primary-teal);
+            border-bottom: 3px solid var(--primary-teal);
+        }
+
+        .about-container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .about-content h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
+            text-align: center;
+            margin-bottom: 4rem;
+            letter-spacing: 4px;
+            color: var(--white);
+        }
+
+        .about-text {
+            background: var(--darker-navy);
+            padding: 4rem;
+            border-radius: 8px;
+            border-left: 5px solid var(--primary-teal);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-text p {
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            line-height: 1.9;
+            margin-bottom: 1.8rem;
+        }
+
+        .about-text p.lead {
+            font-size: 1.4rem;
+            color: var(--light);
+            font-weight: 600;
+            margin-bottom: 2.5rem;
+        }
+
+        .about-text p.highlight {
+            color: var(--primary-teal);
+            font-size: 1.3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 1.5rem;
+            background: rgba(76, 181, 197, 0.1);
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .about-text strong {
+            color: var(--primary-teal);
+            font-weight: 700;
+        }
+
         /* Problem Solution Section */
         .problem-solution {
             max-width: 1400px;
@@ -570,7 +631,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(26, 37, 47, 0.98), transparent);
+            background: linear-gradient(to top, rgba(26, 37, 47, 1) 0%, rgba(26, 37, 47, 0.95) 70%, transparent 100%);
             padding: 2.5rem;
             transform: translateY(100%);
             transition: transform 0.3s;
@@ -587,12 +648,178 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
         }
 
         .project-overlay p {
-            color: var(--text-gray);
+            color: var(--white);
             font-size: 1.1rem;
             line-height: 1.5;
+            font-weight: 500;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Epoxy Calculator */
+        .calculator-section {
+            background: linear-gradient(135deg, var(--darker-navy) 0%, var(--dark-navy) 100%);
+            padding: 10rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calculator-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 80% 20%, rgba(76, 181, 197, 0.1) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .calculator-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .calculator-container h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            letter-spacing: 4px;
+            color: var(--white);
+        }
+
+        .calculator-container .subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--text-gray);
+            margin-bottom: 4rem;
+            font-weight: 500;
+        }
+
+        .calculator-box {
+            background: var(--dark-navy);
+            padding: 4rem;
+            border-radius: 8px;
+            border: 2px solid var(--primary-teal);
+            box-shadow: 0 15px 50px rgba(76, 181, 197, 0.2);
+        }
+
+        .calculator-inputs {
+            margin-bottom: 3rem;
+        }
+
+        .input-group {
+            margin-bottom: 2rem;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--light);
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 1.2rem;
+            font-size: 1.1rem;
+            background: var(--darker-navy);
+            border: 2px solid rgba(76, 181, 197, 0.3);
+            border-radius: 4px;
+            color: var(--light);
+            font-family: 'Rajdhani', sans-serif;
+            transition: border-color 0.3s;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            outline: none;
+            border-color: var(--primary-teal);
+            box-shadow: 0 0 15px rgba(76, 181, 197, 0.3);
+        }
+
+        .calculator-result {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 3rem;
+            border-top: 2px solid rgba(76, 181, 197, 0.3);
+        }
+
+        .calculator-result h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            color: var(--primary-teal);
+            margin-bottom: 1.5rem;
+            letter-spacing: 2px;
+        }
+
+        .cost-display {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 4rem;
+            color: var(--white);
+            margin-bottom: 2rem;
+            text-shadow: 0 0 30px rgba(76, 181, 197, 0.5);
+        }
+
+        .disclaimer {
+            background: rgba(76, 181, 197, 0.05);
+            padding: 2rem;
+            border-radius: 4px;
+            border-left: 4px solid var(--primary-teal);
+            text-align: left;
+            margin: 2rem 0;
+        }
+
+        .disclaimer p {
+            color: var(--text-gray);
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .disclaimer strong {
+            color: var(--primary-teal);
+            font-weight: 700;
+        }
+
+        .disclaimer ul {
+            list-style: none;
+            margin: 1rem 0 1.5rem 0;
+            padding-left: 0;
+        }
+
+        .disclaimer li {
+            color: var(--text-gray);
+            padding: 0.5rem 0 0.5rem 1.5rem;
+            position: relative;
+            font-size: 1.05rem;
+        }
+
+        .disclaimer li::before {
+            content: '✗';
+            position: absolute;
+            left: 0;
+            color: var(--primary-teal);
+            font-weight: bold;
+        }
+
+        .disclaimer .final-note {
+            font-weight: 600;
+            color: var(--light);
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(76, 181, 197, 0.2);
         }
 
         /* Services Section */
@@ -762,16 +989,90 @@
             font-size: 1.15rem;
         }
 
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--accent-light) 50%, var(--primary-teal) 100%);
-            padding: 8rem 2rem;
+        /* FAQ Section */
+        .faq-section {
+            background: var(--darker-navy);
+            padding: 10rem 2rem;
+        }
+
+        .faq-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .faq-container h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.8rem, 5vw, 4.5rem);
             text-align: center;
+            margin-bottom: 1.5rem;
+            letter-spacing: 4px;
+            color: var(--white);
+        }
+
+        .faq-container .subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--text-gray);
+            margin-bottom: 5rem;
+            font-weight: 500;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3rem;
+        }
+
+        .faq-item {
+            background: var(--dark-navy);
+            padding: 3rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-teal);
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .faq-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(76, 181, 197, 0.2);
+            border-left-width: 6px;
+        }
+
+        .faq-item h3 {
+            font-size: 1.5rem;
+            color: var(--primary-teal);
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .faq-item p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .faq-item a {
+            color: var(--primary-teal);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .faq-item a:hover {
+            color: var(--accent-light);
+        }
+
+        /* Contact Form with CTA Styling */
+        .contact-form {
+            background: linear-gradient(135deg, var(--primary-teal) 0%, var(--accent-light) 50%, var(--primary-teal) 100%);
+            padding: 10rem 2rem;
             position: relative;
             overflow: hidden;
         }
 
-        .cta-section::before {
+        .contact-form::before {
             content: '';
             position: absolute;
             top: -50%;
@@ -780,10 +1081,11 @@
             height: 200%;
             background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
             animation: rotate 25s linear infinite;
+            z-index: 0;
         }
 
-        /* Large logo watermark in CTA section */
-        .cta-section::after {
+        /* Logo watermark in contact section */
+        .contact-form::after {
             content: '';
             position: absolute;
             top: 50%;
@@ -795,44 +1097,136 @@
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            opacity: 0.15;
+            opacity: 0.12;
             z-index: 0;
         }
 
-        .cta-section h2 {
+        .form-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .form-container h2 {
             font-family: 'Bebas Neue', sans-serif;
             font-size: clamp(2.8rem, 5vw, 4.5rem);
-            color: var(--darker-navy);
-            margin-bottom: 2rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
             letter-spacing: 4px;
-            position: relative;
-            z-index: 1;
+            color: var(--darker-navy);
         }
 
-        .cta-section p {
-            font-size: 1.5rem;
+        .form-container .subtitle {
+            text-align: center;
+            font-size: 1.4rem;
             color: var(--darker-navy);
-            margin-bottom: 3.5rem;
+            margin-bottom: 1.5rem;
             font-weight: 600;
-            position: relative;
-            z-index: 1;
         }
 
-        .cta-section .btn {
-            background: var(--darker-navy);
-            color: var(--white);
-            border: 3px solid var(--darker-navy);
-            position: relative;
-            z-index: 1;
+        .contact-options {
+            text-align: center;
             font-size: 1.3rem;
-            padding: 1.5rem 4rem;
+            color: var(--darker-navy);
+            margin-bottom: 4rem;
+            font-weight: 600;
         }
 
-        .cta-section .btn:hover {
-            background: transparent;
+        .phone-link {
             color: var(--darker-navy);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.5rem;
+            border-bottom: 3px solid var(--darker-navy);
+            padding-bottom: 2px;
+            transition: all 0.3s;
+        }
+
+        .phone-link:hover {
+            color: var(--white);
+            border-bottom-color: var(--white);
+        }
+
+        #quoteForm {
+            background: rgba(26, 37, 47, 0.95);
+            padding: 4rem;
+            border-radius: 8px;
+            border: 3px solid var(--darker-navy);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--light);
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1.2rem;
+            font-size: 1.1rem;
+            background: var(--dark-navy);
+            border: 2px solid rgba(76, 181, 197, 0.3);
+            border-radius: 4px;
+            color: var(--light);
+            font-family: 'Rajdhani', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-teal);
+            box-shadow: 0 0 15px rgba(76, 181, 197, 0.3);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        #quoteForm .btn {
+            width: 100%;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            padding: 1.5rem;
+        }
+
+        .form-note {
+            text-align: center;
+            margin-top: 2rem;
+            color: var(--text-gray);
+            font-size: 1.1rem;
+        }
+
+        .form-note a {
+            color: var(--primary-teal);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+
+        .form-note a:hover {
+            color: var(--accent-light);
         }
 
         /* Footer */
@@ -953,8 +1347,26 @@
             .services-grid,
             .reasons-grid,
             .problem-grid,
-            .projects-grid {
+            .projects-grid,
+            .faq-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .about-text {
+                padding: 2.5rem;
+            }
+
+            .calculator-box {
+                padding: 2.5rem;
+            }
+
+            #quoteForm {
+                padding: 2.5rem;
             }
 
             .solution-box {
@@ -986,9 +1398,9 @@
                 <img src="Elite_Solutions_Group_5.png" alt="Elite Solutions Group">
             </div>
             <ul class="nav-links">
+                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#why-us">Why Us</a></li>
                 <li><a href="#contact" class="cta-nav">Get Quote</a></li>
             </ul>
         </div>
@@ -1032,6 +1444,26 @@
             <div class="stat-item">
                 <h3>100%</h3>
                 <p>Satisfaction</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>ABOUT ELITE SOLUTIONS GROUP</h2>
+                <div class="about-text">
+                    <p class="lead">Elite Solutions Group began as Elite Waterproofing, founded by Rick Crockett over 40 years ago with a commitment to protecting Colorado properties from water damage and deterioration.</p>
+                    
+                    <p>In 2023, Mikey Sasina acquired the company with a bold vision: transform a specialized waterproofing contractor into a comprehensive commercial building solutions provider. Why juggle multiple contractors when one trusted team can handle it all?</p>
+                    
+                    <p>In December 2025, we officially rebranded to <strong>Elite Solutions Group</strong>—reflecting our evolution beyond waterproofing into epoxy flooring, parking lot striping, snow removal, joint sealing, and more. Our technicians maintain industry certifications including OSHA safety training, manufacturer-specific installations, and specialized high-access work credentials.</p>
+                    
+                    <p class="highlight">Same expertise. Broader services. One trusted team serving Denver and greater Colorado, including mountain properties.</p>
+                    
+                    <p>Whether you need emergency water damage response at 2 AM or a planned multi-phase renovation, Elite Solutions Group delivers precision application, quality craftsmanship, and coordinated teams on every project.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1114,6 +1546,51 @@
                 <div class="project-overlay">
                     <h4>Sport Court Systems</h4>
                     <p>Year-round playability with professional waterproofing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Epoxy Calculator -->
+    <section class="calculator-section">
+        <div class="calculator-container">
+            <h2>ESTIMATE YOUR EPOXY PROJECT</h2>
+            <p class="subtitle">Get a ballpark estimate for your commercial epoxy flooring project</p>
+            
+            <div class="calculator-box">
+                <div class="calculator-inputs">
+                    <div class="input-group">
+                        <label for="sqft">Square Footage:</label>
+                        <input type="number" id="sqft" placeholder="e.g., 1000" min="1">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="finish">Finish Type:</label>
+                        <select id="finish">
+                            <option value="basic">Basic Epoxy ($3-5/sq ft)</option>
+                            <option value="midgrade">Mid-Grade ($5-8/sq ft)</option>
+                            <option value="premium">Premium/Metallic ($8-12/sq ft)</option>
+                        </select>
+                    </div>
+                    
+                    <button class="btn btn-primary" onclick="calculateEpoxy()">Calculate Estimate</button>
+                </div>
+                
+                <div class="calculator-result" id="result" style="display: none;">
+                    <h3>Estimated Cost Range</h3>
+                    <div class="cost-display" id="costDisplay">$0 - $0</div>
+                    <div class="disclaimer">
+                        <p><strong>Important:</strong> This estimate is for materials and installation only.</p>
+                        <p><strong>Does NOT include:</strong></p>
+                        <ul>
+                            <li>Surface preparation (grinding, crack repair, leveling)</li>
+                            <li>Removal of existing coatings</li>
+                            <li>Moisture mitigation or vapor barriers</li>
+                            <li>Custom colors, logos, or decorative designs</li>
+                        </ul>
+                        <p class="final-note">Actual cost depends on floor condition. Schedule a free inspection for an accurate quote.</p>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Get Free Quote</a>
                 </div>
             </div>
         </div>
@@ -1249,11 +1726,110 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" id="contact">
-        <h2>READY TO SIMPLIFY YOUR BUILDING MAINTENANCE?</h2>
-        <p>Get a free consultation and discover how much easier property management can be.</p>
-        <a href="tel:303-360-5606" class="btn">Call 303-360-5606</a>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            <p class="subtitle">Get answers to common questions about our services</p>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What services do you offer?</h3>
+                    <p>We're a full-service commercial building contractor offering waterproofing, epoxy flooring, parking lot striping, snow removal, caulking & sealing, masonry repair, and more. One partner for all your building maintenance needs.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>What areas do you serve?</h3>
+                    <p>We serve Denver and greater Colorado, including mountain properties. Our teams are equipped to handle projects throughout the region with the same quality and reliability.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you handle emergencies?</h3>
+                    <p>Yes! We provide 24/7 emergency response for water damage and snow removal. Call 303-360-5606 anytime and we'll dispatch a team immediately.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How much does epoxy flooring cost?</h3>
+                    <p>Epoxy flooring typically ranges from $3-12 per square foot depending on the finish type and floor condition. Use our <a href="#" onclick="document.querySelector('.calculator-section').scrollIntoView({behavior: 'smooth'}); return false;">calculator above</a> for an estimate, then schedule a free inspection for an exact quote.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you offer free estimates?</h3>
+                    <p>Yes, always. We provide free on-site inspections and detailed quotes for all services. No hidden fees, no surprises—just honest pricing.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Are you licensed and insured?</h3>
+                    <p>Absolutely. Elite Solutions Group is fully licensed and insured for all services we provide. We maintain comprehensive liability coverage and worker's compensation for your protection.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How long does an epoxy floor take?</h3>
+                    <p>Most commercial epoxy flooring projects take 2-3 days from start to finish, depending on square footage and floor prep requirements. We work efficiently to minimize disruption to your operations.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can you handle multiple services at once?</h3>
+                    <p>That's our specialty! Coordinating multiple trades (waterproofing, flooring, striping) in a single project saves you time and money. One project manager, one schedule, one point of contact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form with CTA -->
+    <section class="contact-form" id="contact">
+        <div class="form-container">
+            <h2>READY TO SIMPLIFY YOUR BUILDING MAINTENANCE?</h2>
+            <p class="subtitle">Get a free consultation and discover how much easier property management can be.</p>
+            <p class="contact-options">Call us at <a href="tel:303-360-5606" class="phone-link">303-360-5606</a> or complete the form below</p>
+            
+            <form id="quoteForm" action="https://formspree.io/f/xovqqbbl" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company">Company</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="service">Service Needed *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service...</option>
+                        <option value="Waterproofing">Waterproofing</option>
+                        <option value="Epoxy Flooring">Epoxy Flooring</option>
+                        <option value="Striping & Traffic Coatings">Striping & Traffic Coatings</option>
+                        <option value="Snow Removal">Snow Removal</option>
+                        <option value="Caulking & Sealing">Caulking & Sealing</option>
+                        <option value="Multiple Services">Multiple Services</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Project Details *</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us about your project, location, timeline, etc." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Send Quote Request</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -1269,11 +1845,7 @@
                 <a href="tel:303-360-5606">303-360-5606</a>
                 <a href="mailto:office@elitesg.biz">office@elitesg.biz</a>
                 <p>7270 Gilpin Way, Suite 210<br>Denver, CO 80229</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3>Hours</h3>
-                <p>Monday - Friday: 8am - 5pm<br>Saturday: By Appointment<br>Sunday: Closed<br><br>24/7 Emergency Service Available</p>
+                <p style="margin-top: 1.5rem; font-weight: 600;">Serving Denver & Greater Colorado</p>
             </div>
             
             <div class="footer-section">
@@ -1290,5 +1862,52 @@
             <p>&copy; 2026 Elite Solutions Group. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        function calculateEpoxy() {
+            const sqft = parseInt(document.getElementById('sqft').value);
+            const finish = document.getElementById('finish').value;
+            const resultDiv = document.getElementById('result');
+            const costDisplay = document.getElementById('costDisplay');
+            
+            if (!sqft || sqft < 1) {
+                alert('Please enter a valid square footage');
+                return;
+            }
+            
+            let minPrice, maxPrice;
+            
+            switch(finish) {
+                case 'basic':
+                    minPrice = sqft * 3;
+                    maxPrice = sqft * 5;
+                    break;
+                case 'midgrade':
+                    minPrice = sqft * 5;
+                    maxPrice = sqft * 8;
+                    break;
+                case 'premium':
+                    minPrice = sqft * 8;
+                    maxPrice = sqft * 12;
+                    break;
+            }
+            
+            const formattedMin = minPrice.toLocaleString('en-US', {style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0});
+            const formattedMax = maxPrice.toLocaleString('en-US', {style: 'currency', currency: 'USD', minimumFractionDigits: 0, maximumFractionDigits: 0});
+            
+            costDisplay.textContent = formattedMin + ' - ' + formattedMax;
+            resultDiv.style.display = 'block';
+            
+            // Smooth scroll to result
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        
+        // Allow Enter key to calculate
+        document.getElementById('sqft').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                calculateEpoxy();
+            }
+        });
+    </script>
 </body>
 </html>
